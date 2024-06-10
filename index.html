@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, main, footer {
+            margin-bottom: 20px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Order Your Pizza</h1>
+</header>
+
+<main>
+    <form action="/submit-order" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Order Details</legend>
+            <label for="num-pizzas">Number of Pizzas:</label>
+            <input type="number" id="num-pizzas" name="num-pizzas" min="1" max="10" required>
+            <br>
+            <label for="size">Size:</label>
+            <select id="size" name="size" required>
+                <option value="small">Small (6 slices)</option>
+                <option value="medium">Medium (8 slices)</option>
+                <option value="large">Large (12 slices)</option>
+            </select>
+            <br>
+            <label>Shape:</label>
+            <input type="radio" id="round" name="shape" value="round" checked>
+            <label for="round">Round</label>
+            <input type="radio" id="square" name="shape" value="square">
+            <label for="square">Square</label>
+            <br>
+            <label for="crust">Crust Type:</label>
+            <select id="crust" name="crust" required>
+                <option value="thin">Thin Crust</option>
+                <option value="deep">Deep Dish</option>
+                <option value="stuffed">Stuffed Crust</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+            <br>
+            <label>Toppings:</label>
+            <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <input type="checkbox" id="onions" name="toppings" value="onions">
+            <label for="onions">Onions</label>
+            <input type="checkbox" id="sausage" name="toppings" value="sausage">
+            <label for="sausage">Sausage</label>
+            <input type="checkbox" id="bacon" name="toppings" value="bacon">
+            <label for="bacon">Bacon</label>
+            <input type="checkbox" id="extra-cheese" name="toppings" value="extra-cheese">
+            <label for="extra-cheese">Extra Cheese</label>
+            <input type="checkbox" id="black-olives" name="toppings" value="black-olives">
+            <label for="black-olives">Black Olives</label>
+            <input type="checkbox" id="green-peppers" name="toppings" value="green-peppers">
+            <label for="green-peppers">Green Peppers</label>
+            <input type="checkbox" id="pineapple" name="toppings" value="pineapple">
+            <label for="pineapple">Pineapple</label>
+            <input type="checkbox" id="spinach" name="toppings" value="spinach">
+            <label for="spinach">Spinach</label>
+            <br>
+            <label>Order Type:</label>
+            <input type="radio" id="takeout" name="order-type" value="takeout" checked>
+            <label for="takeout">Takeout</label>
+            <input type="radio" id="delivery" name="order-type" value="delivery">
+            <label for="delivery">Delivery</label>
+            <input type="radio" id="eat-in" name="order-type" value="eat-in">
+            <label for="eat-in">Eat-in</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        </fieldset>
+
+        <input type="submit" value="Submit Order">
+        <input type="reset" value="Reset Form">
+    </form>
+    
+    <p>
+        <img src="pizza.jpg" alt="Delicious pizza with various toppings">
+    </p>
+</main>
+
+<footer>
+    <p>&copy; 2024 Pizza Place. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
